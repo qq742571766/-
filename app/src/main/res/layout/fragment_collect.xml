@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/assistor26"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/layout_arcview_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_tv_btn"
+                android:drawableLeft="@drawable/assistor23"
+                android:drawableRight="@drawable/assistor25"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:text="@string/history" />
+
+            <Button
+                android:id="@+id/btn_dispose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_tv_btn"
+                android:drawableLeft="@drawable/assistor24"
+                android:drawableRight="@drawable/assistor25"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:text="@string/dispose" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_shuju"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/assistor22" />
+
+        <ImageView
+            android:id="@+id/btn_error"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/assistor21" />
+    </LinearLayout>
+</LinearLayout>

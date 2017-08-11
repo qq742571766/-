@@ -1,0 +1,626 @@
+﻿<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+	<link href="css/mui.picker.css" rel="stylesheet" />
+	<link href="css/mui.poppicker.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<style>
+			.mui-btn {
+				font-size: 14px;
+				padding: 8px;
+				margin: 3px;
+			}
+
+			h5.mui-content-padded:first-child {
+				margin-top: 12px !important;
+			}
+
+			.ui-alert {
+				text-align: center;
+				padding: 20px;
+				font-size: 16px;
+			}
+
+			.div {
+				font-size: 14px;
+				overflow-y: visible;
+				overflow-x: visible;
+			}
+
+			.thWidthAndHeight {
+				width: 80px;
+				height: 20px;
+			}
+		</style>
+	<script language="javascript">
+			$(function() {
+				var date = new Date();
+				var seperator1 = "-";
+				var seperator2 = ":";
+				var month = date.getMonth() + 1;
+				var strDate = date.getDate();
+				var minutes = date.getMinutes();
+				if(month >= 1 && month <= 9) {
+					month = "0" + month;
+				}
+				if(strDate >= 0 && strDate <= 9) {
+					strDate = "0" + strDate;
+				}
+				if(minutes >= 0 && minutes <= 9) {
+					strDate = "0" + strDate;
+				}
+				var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate +
+					"T" + date.getHours() + seperator2 + date.getMinutes();
+				document.getElementById("errorTime").value = currentdate;
+			});
+
+			function javaCallJs(s, a, files) {
+				document.getElementById('myForm').action = 'http://192.168.10.21:8080/HiperMES/ErrorController.sp?method=saveError&error_man_type=2&createUserId=' + s + '&category=' + a + '&url=' + files;
+			}
+
+			function beforeSubmit(myForm) {
+				if(myForm.errorUserId.value == '') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.otherUserId.value == '') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.errorContent.value == '') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.errorTime.value == '') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.errorType.value == '请选择') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.area.value == '请选择') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.factory.value == '请选择') {
+					myForm.id.focus();
+					return false;
+				}
+				if(myForm.workerClass.value == '请选择') {
+					myForm.id.focus();
+					return false;
+				}
+				window.Android.submit('{"errorUserId":"' + myForm.errorUserId.value + '","otherUserId":"' + myForm.otherUserId.value + '","errorContent":"' + myForm.errorContent.value + '","errorType":"' + myForm.errorType.value + '","area":"' + myForm.area.value + '","factory":"' + myForm.factory.value + '","workerClass":"' + myForm.workerClass.value + '","errorTime":"' + myForm.errorTime.value + '"}');
+				return true;
+			}
+			//URI: /storage/emulated/0/Android/data/cn.com.unilever.www.unileverapp/cache/12.png
+			//uri:content://com.android.contacts/contacts
+			//URI: /storage/sdcard0/Android/data/cn.com.unilever.www.unileverapp/cache/11.png
+		</script>
+</head>
+
+<body>
+<form id="myForm" onSubmit="return beforeSubmit(this);" method="post" style="width: 97%;margin-left:5px;" accept-charset="utf-8" enctype="multipart/form-data">
+	<div style="text-align: center;">
+		<img style="margin-top: 10px;" id="img" src="pf.png" width="60px" height="60px" onclick="sendInfoToAndroid()">
+		<h5 class="mui-content-padded" style="">请选择图片</h5>
+	</div>
+	<div class="mui-content div">
+		<table width="100%">
+			<tr bgcolor="#FFFFFF" style="height: 40px;">
+				<th class="thWidthAndHeight"><input readonly="readonly" type="text" value='类型' class="mui-btn mui-btn-block"></th>
+				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='errorType' placeholder='请选择' id='showUserPicker0' class="mui-btn mui-btn-block"></th>
+				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<p></p>
+				</th>
+			</tr>
+			<tr bgcolor="#FFFFFF" style="height: 40px;">
+				<th><input readonly="readonly" type="text" value='区域类型' class="mui-btn mui-btn-block">
+				</th>
+				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='area' placeholder='请选择' id='showUserPicker1' class="mui-btn mui-btn-block"></th>
+				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<p></p>
+				</th>
+			</tr>
+			<tr bgcolor="#FFFFFF" style="height: 40px;">
+				<th><input readonly="readonly" type="text" value='设备' class="mui-btn mui-btn-block">
+				</th>
+				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='factory' placeholder='请选择' id='showUserPicker3' class="mui-btn mui-btn-block"></th>
+				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<p></p>
+				</th>
+			</tr>
+			<tr bgcolor="#FFFFFF" style="height: 40px;">
+				<th><input readonly="readonly" type="text" value='班次' class="mui-btn mui-btn-block">
+				</th>
+				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='workerClass' placeholder='请选择' id='showUserPicker5' class="mui-btn mui-btn-block"></th>
+				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<p></p>
+				</th>
+			</tr>
+			<tr bgcolor="#FFFFFF" style="margin-right: 0px;">
+				<th><input readonly="readonly" type="text" value='时间' class="mui-btn mui-btn-block">
+				</th>
+				<th><input id="errorTime" type="datetime-local" style="padding-top:9px;border: 0px solid transparent;background-color: transparent;margin: 0px" name="errorTime" /></th>
+				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
+				</th>
+			</tr>
+		</table>
+		<tr>
+			<th>
+				<p></p>
+			</th>
+		</tr>
+		<textarea placeholder="责任人员" class="div" autocomplete="off" id="errorUserId" name="errorUserId" onpaste="return false" required="required" style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 40px;" maxlength="80"></textarea>
+		<p></p>
+		<textarea placeholder="相关人员" class="div" autocomplete="off" id="otherUserId" name="otherUserId" onpaste="return false" required="required" style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 40px;" maxlength="80"></textarea>
+		<p></p>
+		<textarea placeholder="问题简述" class="div" autocomplete="off" id="errorContent" name="errorContent" onpaste="return false" required="required" style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 100px;" maxlength="80"></textarea>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+	</div>
+	<br/>
+	<div style="text-align: center">
+		<input class="mui-btn mui-btn-block" type="submit" style="height:40px;background: url(assistor26.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;text-align:center;margin-bottom: 5px;" onclick="window.Android.upload()" />
+	</div>
+</form>
+<script type="text/javascript">
+			//----------------------
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var userPicker = new $.PopPicker({
+						layer: 2
+					});
+					userPicker.setData([{
+						value: 'AM',
+						text: 'AM',
+						children: [{
+							value: "质量",
+							text: "质量"
+						}, {
+							value: "污染源",
+							text: "污染源"
+						}, {
+							value: "困难部位",
+							text: "困难部位"
+						}, {
+							value: "其他",
+							text: "其他"
+						}]
+					}, {
+						value: 'PM',
+						text: 'PM',
+						children: [{
+							value: "质量",
+							text: "质量"
+						}, {
+							value: "污染源",
+							text: "污染源"
+						}, {
+							value: "困难部位",
+							text: "困难部位"
+						}, {
+							value: "其他",
+							text: "其他"
+						}]
+					}, {
+						value: '安全',
+						text: '安全',
+						children: [{
+							value: "安全",
+							text: "安全"
+						}]
+					}, {
+						value: '不安全状态',
+						text: '不安全状态',
+						children: [{
+							value: "不安全状态",
+							text: "不安全状态"
+						}]
+					}, {
+						value: '环境',
+						text: '环境',
+						children: [{
+							value: "能源",
+							text: "能源"
+						}, {
+							value: "废弃物",
+							text: "废弃物"
+						}, {
+							value: "危险废弃物",
+							text: "危险废弃物"
+						}, {
+							value: "化学品",
+							text: "化学品"
+						}, {
+							value: "水",
+							text: "水"
+						}, {
+							value: "污水",
+							text: "污水"
+						}]
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker0');
+					var userResult = doc.getElementById('showUserPicker0');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							var strs = new Array(); //定义一数组
+							var str = JSON.stringify(items[0]);
+							strs = str.split("\""); //字符分割
+							var sss = strs[7];
+							var str2 = JSON.stringify(items[1]);
+							strs2 = str2.split("\""); //字符分割
+							var sss2 = strs2[7];
+							userResult.value = sss + ' ' + sss2;
+						});
+					}, false);
+				});
+			})(mui, document);
+			//-----------------------------------------
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var userPicker = new $.PopPicker({
+						layer: 2
+					});
+					userPicker.setData([{
+						value: '预配',
+						text: '预配',
+						children: [{
+							value: "预配",
+							text: "预配"
+						}]
+					}, {
+						value: '烧料',
+						text: '烧料',
+						children: [{
+							value: "1#10ton",
+							text: "1#10ton"
+						}, {
+							value: "2#10ton",
+							text: "2#10ton"
+						}, {
+							value: "3#10ton",
+							text: "3#10ton"
+						}, {
+							value: "4#8ton",
+							text: "4#8ton"
+						}, {
+							value: "5#10ton",
+							text: "5#10ton"
+						}, {
+							value: "6#10ton",
+							text: "6#10ton"
+						}, {
+							value: "7#10ton",
+							text: "7#10ton"
+						}, {
+							value: "8#10ton",
+							text: "8#10ton"
+						}]
+					}, {
+						value: '灌装',
+						text: '灌装',
+						children: [{
+							value: "PUCK1",
+							text: "PUCK1"
+						}, {
+							value: "PUCK2",
+							text: "PUCK2"
+						}, {
+							value: "PUCK3",
+							text: "PUCK3"
+						}, {
+							value: "PUCK4",
+							text: "PUCK4"
+						}, {
+							value: "PUMP1",
+							text: "PUMP1"
+						}, {
+							value: "PUMP2",
+							text: "PUMP2"
+						}, {
+							value: "PUMP3",
+							text: "PUMP3"
+						}, {
+							value: "Ronchi1",
+							text: "Ronchi1"
+						}, {
+							value: "Ronchi2",
+							text: "Ronchi2"
+						}, {
+							value: "Ronchi3",
+							text: "Ronchi3"
+						}, {
+							value: "小立袋",
+							text: "小立袋"
+						}, {
+							value: "大立袋",
+							text: "大立袋"
+						}]
+					}, {
+						value: '包装',
+						text: '包装',
+						children: [{
+							value: "PUCK1",
+							text: "PUCK1"
+						}, {
+							value: "PUCK2",
+							text: "PUCK2"
+						}, {
+							value: "PUCK3",
+							text: "PUCK3"
+						}, {
+							value: "PUCK4",
+							text: "PUCK4"
+						}, {
+							value: "PUMP1",
+							text: "PUMP1"
+						}, {
+							value: "PUMP2",
+							text: "PUMP2"
+						}, {
+							value: "PUMP3",
+							text: "PUMP3"
+						}, {
+							value: "Ronchi1",
+							text: "Ronchi1"
+						}, {
+							value: "Ronchi2",
+							text: "Ronchi2"
+						}, {
+							value: "Ronchi3",
+							text: "Ronchi3"
+						}, {
+							value: "小立袋",
+							text: "小立袋"
+						}, {
+							value: "大立袋",
+							text: "大立袋"
+						}]
+					}, {
+						value: '码板',
+						text: '码板',
+						children: [{
+							value: "PUCK1",
+							text: "PUCK1"
+						}, {
+							value: "PUCK2",
+							text: "PUCK2"
+						}, {
+							value: "PUCK3",
+							text: "PUCK3"
+						}, {
+							value: "PUCK4",
+							text: "PUCK4"
+						}, {
+							value: "PUMP1",
+							text: "PUMP1"
+						}, {
+							value: "PUMP2",
+							text: "PUMP2"
+						}, {
+							value: "PUMP3",
+							text: "PUMP3"
+						}, {
+							value: "Ronchi1",
+							text: "Ronchi1"
+						}, {
+							value: "Ronchi2",
+							text: "Ronchi2"
+						}, {
+							value: "Ronchi3",
+							text: "Ronchi3"
+						}, {
+							value: "小立袋",
+							text: "小立袋"
+						}, {
+							value: "大立袋",
+							text: "大立袋"
+						}]
+					}, {
+						value: '5T 坦克',
+						text: '5T 坦克',
+						children: [{
+							value: "NA",
+							text: "NA"
+						}]
+					}, {
+						value: '罐区',
+						text: '罐区',
+						children: [{
+							value: "东罐区",
+							text: "东罐区"
+						}, {
+							value: "西罐区",
+							text: "西罐区"
+						}]
+					}, {
+						value: '卡波站',
+						text: '卡波站',
+						children: [{
+							value: "卡波站",
+							text: "卡波站"
+						}]
+					}, {
+						value: '公共区域',
+						text: '公共区域',
+						children: [{
+							value: "茶水间",
+							text: "茶水间"
+						}, {
+							value: "LVA站",
+							text: "LVA站"
+						}, {
+							value: "5Ton坦克打料泵",
+							text: "5Ton坦克打料泵"
+						}]
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker1');
+					var userResult = doc.getElementById('showUserPicker1');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							var strs = new Array(); //定义一数组
+							var str = JSON.stringify(items[0]);
+							strs = str.split("\""); //字符分割
+							var sss = strs[7];
+							var str2 = JSON.stringify(items[1]);
+							strs2 = str2.split("\""); //字符分割
+							var sss2 = strs2[7];
+							userResult.value = sss + ' ' + sss2;
+						});
+					}, false);
+				});
+			})(mui, document);
+			//-----------------------------------------
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: '理瓶机',
+						text: '理瓶机'
+					}, {
+						value: 'BTU',
+						text: 'BTU'
+					}, {
+						value: '理盖机',
+						text: '理盖机'
+					}, {
+						value: '灌装机',
+						text: '灌装机'
+					}, {
+						value: '开箱机',
+						text: '开箱机'
+					}, {
+						value: '装箱机',
+						text: '装箱机'
+					}, {
+						value: '封箱机',
+						text: '封箱机'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker3');
+					var userResult = doc.getElementById('showUserPicker3');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							var strs = new Array(); //定义一数组
+							var str = JSON.stringify(items[0]);
+							strs = str.split("\""); //字符分割
+							var sss = strs[7];
+							userResult.value = sss;
+						});
+					}, false);
+				});
+			})(mui, document);
+			//--------------------------------------
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var userPicker = new $.PopPicker({
+						layer: 2
+					});
+					userPicker.setData([{
+						value: '白班',
+						text: '白班',
+						children: [{
+							value: 'A',
+							text: 'A'
+						}, {
+							value: 'B',
+							text: 'B'
+						}, {
+							value: 'C',
+							text: 'C'
+						}, {
+							value: 'D',
+							text: 'D'
+						}]
+					}, {
+						value: '夜班',
+						text: '夜班',
+						children: [{
+							value: 'A',
+							text: 'A'
+						}, {
+							value: 'B',
+							text: 'B'
+						}, {
+							value: 'C',
+							text: 'C'
+						}, {
+							value: 'D',
+							text: 'D'
+						}]
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker5');
+					var userResult = doc.getElementById('showUserPicker5');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							var strs = new Array(); //定义一数组
+							var str = JSON.stringify(items[0]);
+							strs = str.split("\""); //字符分割
+							var sss = strs[7];
+							var str2 = JSON.stringify(items[1]);
+							strs2 = str2.split("\""); //字符分割
+							var sss2 = strs2[7];
+							userResult.value = sss + ' ' + sss2;
+						});
+					}, false);
+				});
+			})(mui, document);
+			//-----------------------------------------
+			function sendInfoToAndroid() {
+				window.Android.picture();
+			}
+
+			function setImag(file) {
+				document.getElementById("img").src = file;
+			}
+
+			function selectFocus() {
+				document.getElementById("select").setAttribute("size", "5");
+			}
+
+			function selectClick() {
+				document.getElementById("select").removeAttribute("size");
+				document.getElementById("select").blur();
+				this.setAttribute("selected", "");
+			}
+
+			function selectStu() {
+				document.getElementById('myForm').action = "ctl.jsp?op=select";
+				document.getElementById("myForm").submit();
+			}
+
+			function form(myForm) {
+				window.Android.submit(myForm.toString());
+			}
+		</script>
+</body>
+
+</html>

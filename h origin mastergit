@@ -1,0 +1,196 @@
+[33mcommit d4963d47b87139bc5d9f6d493ac7a01efebb6c88[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Thu Jul 27 17:16:52 2017 +0800
+
+    优化网络连接
+
+[33mcommit a34764d6013f1b7bcb93c647131a977143cfc94c[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Thu Jul 27 09:15:08 2017 +0800
+
+    BUG修复
+
+[33mcommit a8890e25d3d4f886d357f42ea290ebf0211924ba[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Tue Jul 25 09:32:16 2017 +0800
+
+    BUG修复
+
+[33mcommit 47063356a39b6f1e9f6673d88e7df61cfb98e72f[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon Jul 24 17:40:26 2017 +0800
+
+    SMAT&DCA
+    
+    (cherry picked from commit f52e90ec14c581d890980afcb8c5c94a65707f38)
+    
+    # Conflicts:
+    #       app/src/main/assets/H50B7ECBA/www/samt_page.html
+
+[33mcommit f52e90ec14c581d890980afcb8c5c94a65707f38[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri Jul 21 18:02:34 2017 +0800
+
+    SMAT&DCA
+
+[33mcommit f0f6a245ada97733f40cdc85dd57c420f00fa2d2[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri Jul 21 13:38:26 2017 +0800
+
+    SMAT&DCA
+
+[33mcommit 4b7fb3b9be3cb0f3ddba20a393cff050c7d984cd[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri Jul 21 10:39:18 2017 +0800
+
+    员工上报
+
+[33mcommit f4874e3495d87948f8525cc39955a864db2f8a1f[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Thu Jul 20 08:59:26 2017 +0800
+
+    员工上报
+
+[33mcommit d96eed5a45bfcc333b2552dd17e97ed35c8c1367[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Wed Jul 19 10:51:25 2017 +0800
+
+    员工上报
+
+[33mcommit 504f161b0a5a6a82bbf6e9c4ceec459e11484b95[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Wed Jul 19 09:24:09 2017 +0800
+
+    主管上报
+
+[33mcommit ea09cbf20f5338a367cf526c62b2c671c2f401ff[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon Jul 17 17:26:51 2017 +0800
+
+    照相失灵
+
+[33mcommit 32d7cc28a7c88997c879daeb5131465f9ea90c65[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon Jul 17 09:46:01 2017 +0800
+
+    添加异常选择界面
+
+[33mcommit 1ac599f111003290784beaa544e79491a16d1778[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon Jul 17 09:10:43 2017 +0800
+
+    添加异常选择界面
+
+[33mcommit 1a1b6946cadab8266821a6a09d9b2d6851a0f184[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri Jul 14 14:24:27 2017 +0800
+
+    添加异常选择界面
+
+[33mcommit b6ff08c352c050822caae9c52383471877996784[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri Jul 14 10:33:45 2017 +0800
+
+    添加异常选择界面
+
+[33mcommit 53f97e02bf8795480bbc93659b9ed306e62cb65f[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Thu Jul 13 12:52:48 2017 +0800
+
+    ui
+
+[33mcommit 951be5d07390f6d37c66b83874b1eb51c3b1b0f9[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Wed Jul 12 18:05:34 2017 +0800
+
+    无法登陆
+
+[33mcommit da132c2cd02ccdc746d82314172ba91962f6f84c[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Wed Jul 12 09:44:24 2017 +0800
+
+    上报准备
+
+[33mcommit 96a4b5f96081bfaeacf3642eedf06b5c767f44c7[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Tue Jul 11 15:35:24 2017 +0800
+
+    更改toober
+
+[33mcommit b0104b1ba2d81b93907ac4909e603d83dc734009[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Tue Jul 11 13:20:56 2017 +0800
+
+    等待EMAT上报接口
+
+[33mcommit 4a60eead5cac85f097ab2930d6efa77e531ff476[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Tue Jul 11 13:19:12 2017 +0800
+
+    等待EMAT上报接口
+
+[33mcommit 367584482b0973d2273bcbcd06822e3c45e293ef[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon Jul 10 16:51:39 2017 +0800
+
+    跳转BUG修复
+
+[33mcommit c0260e40c63fae21c5a058abc2bdbeadeb5e46bb[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon Jul 3 10:28:49 2017 +0800
+
+    跳转BUG修复
+
+[33mcommit a2a985b357d3b9fc9748e6cb8a2cf49d600560ab[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Wed Jun 14 13:22:36 2017 +0800
+
+    跳转BUG修复
+
+[33mcommit 43d66fd3a4a18918239d3c32a5f0ef8cac2dd84c[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Thu Jun 8 11:28:33 2017 +0800
+
+    跳转BUG修复
+
+[33mcommit cc073f49ab999c8382989fcd07e19e35e7c07dc0[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Wed Jun 7 11:34:33 2017 +0800
+
+    EMAT提问界面
+
+[33mcommit fbacd9d59e6b6c6268778de20de5146c0ed0fb25[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri Jun 2 11:42:52 2017 +0800
+
+    EMAT提问界面
+
+[33mcommit 8472393d0f854ebff9455a1e3f3a6174d172de0d[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri May 26 12:29:31 2017 +0800
+
+    修复7.0相机相册BUG
+
+[33mcommit 9dd93bd066aa4eba2d00d2a4d1bb9fb40c951024[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon May 22 16:21:35 2017 +0800
+
+    修复警告
+
+[33mcommit 6c83e68aa03590d77af6fd1fcf3fbd7b8f615bd0[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon May 22 16:13:09 2017 +0800
+
+    处理.检验完成
+
+[33mcommit ee8b7745e89dc330abc0e8b48f3e13b9e3626ffa[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Mon May 22 11:49:20 2017 +0800
+
+    获取图片
+
+[33mcommit 09bcfc0613027dfd92d23c3a353b9719cd0ff918[m
+Author: 742571766@qq.com <qq110119120>
+Date:   Fri May 19 16:16:27 2017 +0800
+
+    初步完成与html交互

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html language="cn">
+
+<head>
+	<script language="javascript">
+			function javaCallJs(s) {
+				document.getElementById("problem").innerText = s;
+			}
+		</script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+	<link href="css/mui.picker.css" rel="stylesheet" />
+	<link href="css/mui.poppicker.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+	<style>
+			.mui-btn {
+				white-space: inherit;
+				font-size: 14px;
+			}
+			
+			h5.mui-content-padded:first-child {
+				margin-top: 12px !important;
+			}
+			
+			.ui-alert {
+				text-align: center;
+				padding: 20px;
+				font-size: 14px;
+			}
+			
+			.div {
+				margin-left: 5px;
+				overflow-y: visible;
+				overflow-x: visible;
+			}
+		</style>
+</head>
+
+<body>
+<p> </p>
+<form action="" method="get" style="text-align:center;width:98%;">
+	<strong style="left:20px;right:15px;" class="mui-btn mui-btn-block">问题:</strong>
+	<span class="div mui-btn" width="70%" id="problem" style="height: 100px; border-radius:0;resize:none;width:100%;border: 1px solid rgba(0, 0, 0, 0);background: url(css/assistor32.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;">问题</span>
+	<strong style="left:20px;right:15px;" class="mui-btn mui-btn-block">请作答:</strong>
+	<textarea class="div" placeholder="请作答" name="answer" style="font-size: 14px;resize:none;background: url(css/assistor32.png);background-repeat: no-repeat;background-size:cover;
+		background-size:100% 100%;border: 1px solid rgba(0, 0, 0, 0);height: 100px;" maxlength="50"></textarea>
+	<input type="submit" id="last" value="上一题" onclick="window.Android.last()" style="text-align:center; bottom:15px; left:15px;position:fixed;background: #F4AC12;border: 0px solid rgba(0, 0, 0, 0);" />
+	<input type="submit" id="next" value="下一题" onclick="window.Android.next()" style="text-align:center; bottom:15px; right:15px;position:fixed;background: #1FC192;border: 0px solid rgba(0, 0, 0, 0);" />
+</form>
+</body>
+
+</html>

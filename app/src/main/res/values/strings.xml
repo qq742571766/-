@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Unilever App</string>
+    <string name="error">异常填写</string>
+    <string name="problem">问答发起</string>
+    <string name="answer">EMAT</string>
+    <string name="score">打分</string>
+    <string name="refresh">刷新</string>
+    <string name="title_activity_function">功能界面</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="memory">记住密码</string>
+    <string name="lv">员工</string>
+    <string name="name">张三</string>
+    <string name="problem_pictures">问题图片</string>
+    <string name="affirm">关闭问题</string>
+    <string name="dispose">处理</string>
+    <string name="examine">检查</string>
+    <string name="history">历史</string>
+    <string name="_10_5">发现问题10/处理问题5</string>
+    <string name="sign">iv_arcview_main</string>
+    <string name="title">标题</string>
+    <string name="date">时间</string>
+    <string name="author">出处</string>
+    <string name="url">摘要</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

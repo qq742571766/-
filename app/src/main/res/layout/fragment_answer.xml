@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/EMATtext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/assistor1"
+        android:gravity="center"
+        android:text="题库加载中..."
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <WebView
+        android:id="@+id/wv_emat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/aaaa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/mui.poppicker.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECharts">
+    <script src="http://echarts.baidu.com/echarts2/doc/example/www/js/echarts.js"></script>
+    <script src="js/android.js"></script>
+</head>
+<body onload="loadAChart(2)" style="background: url(assistor1.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;">
+<div id="chart2" style="height:350px;"></div>
+<script type="text/javascript">
+		require.config({
+			paths: {
+				echarts: 'http://echarts.baidu.com/echarts2/doc/example/www/js'
+			}
+		});
+		require(
+			[
+				'echarts',
+				'echarts/chart/pie', // 使用柱状图就加载pie模块，按需加载
+			],
+			function(ec) {
+				// 基于准备好的dom，初始化echarts图表
+				var myChart = ec.init(document.getElementById('chart2'));
+				//设置数据
+				var option = {
+					tooltip: {
+						trigger: 'item',
+						formatter: "{a} <br/>{b} : {c} ({d}%)"
+					},
+					legend: {
+						orient: 'vertical',
+						left: 'left',
+						data: ['占有率']
+					},
+					series: [{
+						name: '饼图二',
+						type: 'pie',
+						radius: ['35%', '60%'],
+						label: {
+							normal: {
+								position: 'center'
+							}
+						},
+						data: [{
+							value: 20,
+							name: '占有率',
+							label: {
+								normal: {
+									formatter: '{d} %',
+									textStyle: {
+										fontSize: 50
+									}
+								}
+							}
+						}, {
+							value: 80,
+							name: '占位',
+							label: {
+								normal: {
+									formatter: '\n完成率',
+									textStyle: {
+										color: '#FFD85E',
+										fontSize: 20
+									}
+								}
+							},
+							tooltip: {
+								show: false
+							},
+							itemStyle: {
+								normal: {
+									color: '#8C17BF'
+								},
+								emphasis: {
+									color: '#FFD85E'
+								}
+							},
+							hoverAnimation: false
+						}]
+					}]
+				};
+
+				// 为echarts对象加载数据
+				myChart.setOption(option);
+			}
+		)
+</script>
+</body>
+</html>

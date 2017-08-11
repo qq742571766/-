@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+		<script language="javascript">
+			function javaCallJs(s) {
+				document.getElementById("problem").innerText = s;
+			}
+
+			function javaCallJ(ss) {
+				document.getElementById("grade").innerText = ss;
+			}
+		</script>
+		<style>
+			.mui-btn {
+				white-space: inherit;
+				font-size: 14px;
+			}
+			
+			h5.mui-content-padded:first-child {
+				margin-top: 12px !important;
+			}
+			
+			.ui-alert {
+				text-align: center;
+				padding: 20px;
+				font-size: 16px;
+			}
+			
+			.div {
+				width: 100%;
+				padding-left: 8px;
+				overflow-y: visible;
+				overflow-x: visible;
+			}
+			
+			.chk_1 {
+				margin: 10px;
+				width: 40px;
+				height: 40px;
+				top: 17px;
+				left: 12px;
+			}
+			
+			.chk_1+label {
+				padding: 15px;
+				margin: 20px;
+				background: url(css/y1.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-size: 100% 100%;
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+			}
+			
+			.chk_1:checked+label {
+				background: url(css/y2.png);
+				background-size: cover;
+				background-size: 100% 100%;
+				width: 40px;
+				height: 40px;
+			}
+			
+			.chk_2 {
+				margin: 10px;
+				width: 40px;
+				height: 40px;
+				top: 17px;
+				left: 12px;
+			}
+			
+			.chk_2+label {
+				padding: 15px;
+				margin: 20px;
+				background: url(css/l1.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-size: 100% 100%;
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				top: 17px;
+				left: 12px;
+			}
+			
+			.chk_2:checked+label {
+				background: url(css/l2.png);
+				background-size: cover;
+				background-size: 100% 100%;
+				width: 40px;
+				height: 40px;
+			}
+			
+			.chk_3 {
+				margin: 10px;
+				width: 40px;
+				height: 40px;
+				top: 17px;
+				left: 12px;
+			}
+			
+			.chk_3+label {
+				padding: 15px;
+				margin: 20px;
+				background: url(css/c1.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-size: 100% 100%;
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				top: 17px;
+				left: 12px;
+			}
+			
+			.chk_3:checked+label {
+				background: url(css/c2.png);
+				background-size: cover;
+				background-size: 100% 100%;
+				width: 40px;
+				height: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div" class="mui-content div" style="width: 98%;">
+			<strong style="left:20px;right:15px;" class="mui-btn mui-btn-block">问题:</strong>
+			<span id="problem" style="background: url(css/assistor32.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;border-radius:0;white-space: inherit;height: 100px;" class="mui-btn mui-btn-block">问题</span>
+			<strong style="left:15px;right:15px" class="mui-btn mui-btn-block">答案:</strong>
+			<span id="grade" style="border-radius:0;white-space: inherit;background: url(css/assistor32.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;height: 150px;" class="mui-btn mui-btn-block">答案</span>
+			<form action="" method="get" style="text-align:center">
+				<br/>
+				<br/>
+				<br/>
+				<input id="input1" name="Fruit" type="radio" id="excellent" class="chk_1" value="1" checked="true" /> <label id="label1" for="input1"></label>
+				<input id="input2" name="Fruit" type="radio" id="good" class="chk_2" value="2" /> <label id="label2" for="input2"></label>
+				<input id="input3" name="Fruit" type="radio" id="difference" class="chk_3" value="3" /> <label id="label3" for="input3"></label>
+				<input type="submit" id="last" value="上一题" onclick="window.Android.last()" style="text-align:center; bottom:15px; left:15px;position:fixed;background: #F4AC12;border: 0px solid rgba(0, 0, 0, 0);" />
+				<input type="submit" id="next" value="下一题" onclick="window.Android.next()" style="text-align:center; bottom:15px; right:15px;position:fixed;background: #1FC192;border: 0px solid rgba(0, 0, 0, 0);" />
+			</form>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeef"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@android:color/white"
+        android:paddingBottom="13dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView_f"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView_f"
+            android:layout_toEndOf="@+id/imageView_f"
+            android:layout_toRightOf="@+id/imageView_f"
+            android:ellipsize="end"
+            android:maxLines="20"
+            android:singleLine="true"
+            android:text="箱子高度"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/f_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_author_name"
+            android:layout_alignBottom="@+id/textView_author_name"
+            android:layout_toEndOf="@+id/textView_author_name"
+            android:layout_toLeftOf="@+id/xiangqing1"
+            android:layout_toRightOf="@+id/textView_author_name"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:text="17/07/12"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView_author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView_f"
+            android:layout_toEndOf="@+id/imageView_f"
+            android:layout_toRightOf="@+id/imageView_f"
+            android:text="Admin"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/xiangqing1"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/f_date"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/assistor121"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/xiangqing2"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/f_date"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/assistor121"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="-19dp"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@android:color/white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/errorType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_errorType"
+                android:layout_alignBottom="@+id/tv_errorType"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="类型：" />
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/errorType"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="区域：" />
+
+            <TextView
+                android:id="@+id/factory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/area"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="设备：" />
+
+            <TextView
+                android:id="@+id/errorTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/factory"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="时间：" />
+
+            <TextView
+                android:id="@+id/errorContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/errorTime"
+                android:drawableLeft="@android:drawable/presence_online"
+                android:text="问题简述：" />
+
+            <TextView
+                android:id="@+id/tv_errorType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/errorType"
+                android:layout_toRightOf="@+id/errorType"
+                android:text="安全" />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_errorType"
+                android:layout_toEndOf="@+id/errorType"
+                android:layout_toRightOf="@+id/errorType"
+                android:text="烧料" />
+
+            <TextView
+                android:id="@+id/tv_factory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/factory"
+                android:layout_alignBottom="@+id/factory"
+                android:layout_toEndOf="@+id/area"
+                android:layout_toRightOf="@+id/area"
+                android:text="BTU" />
+
+            <TextView
+                android:id="@+id/tv_errorTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/factory"
+                android:layout_toEndOf="@+id/errorTime"
+                android:layout_toRightOf="@+id/errorTime"
+                android:text="18:05" />
+
+            <TextView
+                android:id="@+id/tv_errorContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_errorTime"
+                android:layout_toEndOf="@+id/errorContent"
+                android:layout_toRightOf="@+id/errorContent"
+                android:text="因消火箱规格不同，消火栓离消火箱底的高度也不一样，大约120MM-220Mm.。因此消火箱离地高度约为980MM-880mm。" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_errorType"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#EEEEEF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_area"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#EEEEEF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_factory"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#EEEEEF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_errorTime"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#EEEEEF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_errorTime"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#EEEEEF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/lj" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/lj" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/pen"
+        android:gravity="left"
+        android:hint="解决方案"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:singleLine="false"
+        android:textColorHint="#AAAAAA"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_tv_n"
+        android:text="@string/affirm"
+        android:textColor="@android:color/white" />
+</LinearLayout>

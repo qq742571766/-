@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/error_tx"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/assistor1"
+        android:gravity="center"
+        android:text="列表加载中..."
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <WebView
+        android:id="@+id/wv_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
