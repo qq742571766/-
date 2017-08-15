@@ -95,7 +95,6 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
                 SharedPreferences sp = context.getSharedPreferences("grade", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 if (urls.length == 1) {
-                    MyConfig.abbr++;
                 } else {
                     //通过sp储存答案
                     if (urls[1] != null) {

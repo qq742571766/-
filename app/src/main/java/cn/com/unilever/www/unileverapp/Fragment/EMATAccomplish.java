@@ -65,7 +65,6 @@ public class EMATAccomplish extends Fragment implements View.OnClickListener, Vi
                 MyConfig.ExcellentNumber = 0;
                 MyConfig.FineNumber = 0;
                 MyConfig.DadNumber = 0;
-                MyConfig.abbr = 0;
                 SharedPreferences sp = context.getSharedPreferences("grade", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 editor.clear();
@@ -121,8 +120,6 @@ public class EMATAccomplish extends Fragment implements View.OnClickListener, Vi
         textView12.setText(MyConfig.FineNumber + "");
         TextView textView14 = (TextView) view.findViewById(R.id.textView14);
         textView14.setText(MyConfig.DadNumber + "");
-        TextView textView16 = (TextView) view.findViewById(R.id.textView16);
-        textView16.setText(MyConfig.abbr + "");
         webView = (WebView) view.findViewById(R.id.wwv);
         WebSettings webSettings = webView.getSettings();
         //设置支持javaScript脚步语言

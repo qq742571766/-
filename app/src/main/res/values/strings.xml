@@ -23,6 +23,33 @@
     <string name="date">时间</string>
     <string name="author">出处</string>
     <string name="url">摘要</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cs1">箱子高度</string>
+    <string name="cs2">17/07/12</string>
+    <string name="cs3">Admin</string>
+    <string name="leixing">类型：</string>
+    <string name="quyu">区域：</string>
+    <string name="shebei">设备：</string>
+    <string name="shijian">时间：</string>
+    <string name="jianshu">问题简述：</string>
+    <string name="anquan">安全</string>
+    <string name="ranliao">烧料</string>
+    <string name="cs5">BTU</string>
+    <string name="cs6">18:05</string>
+    <string name="cs7">因消火箱规格不同，消火栓离消火箱底的高度也不一样，大约120MM-220Mm.。因此消火箱离地高度约为980MM-880mm。</string>
+    <string name="guanbi">关闭人：</string>
+    <string name="cs4">TextView</string>
+    <string name="gbfangan">关闭方案:</string>
+    <string name="fanhui">返回</string>
+    <string name="bkname">被考人姓名:</string>
+    <string name="datishu">答题数:</string>
+    <string name="you">优:</string>
+    <string name="liang">良:</string>
+    <string name="cha">差:</string>
+    <string name="noda">未回答:</string>
+    <string name="shifou">是否通过,请评判:</string>
+    <string name="tongguo">通过</string>
+    <string name="notongguo">未通过</string>
+    <string name="ing">题库加载中...</string>
+    <string name="lbing">列表加载中...</string>
+    <string name="gcing">继续观察</string>
 </resources>

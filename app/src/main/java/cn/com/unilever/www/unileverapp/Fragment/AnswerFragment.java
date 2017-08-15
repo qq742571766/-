@@ -69,11 +69,6 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
                             s += ",";
                         }
                     }
-//                    try {
-//                        Thread.sleep(2000);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
                     view.findViewById(R.id.EMATtext).setVisibility(View.GONE);
                     s += "}";
                 } catch (JSONException e) {
@@ -238,7 +233,6 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
         MyConfig.ExcellentNumber = 0;
         MyConfig.FineNumber = 0;
         MyConfig.DadNumber = 0;
-        MyConfig.abbr = 0;
         initview();
         initdata();
         button.performClick();

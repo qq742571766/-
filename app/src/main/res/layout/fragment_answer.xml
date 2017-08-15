@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/assistor1"
         android:gravity="center"
-        android:text="题库加载中..."
+        android:text="@string/ing"
         android:textColor="@android:color/white"
         android:textSize="30sp" />
 

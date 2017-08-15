@@ -11,11 +11,11 @@
         android:layout_height="match_parent"
         android:background="@drawable/assistor1"
         android:gravity="center"
-        android:text="列表加载中..."
+        android:text="@string/lbing"
         android:textColor="@android:color/white"
         android:textSize="30sp" />
 
-    <WebView
+    <com.tencent.smtt.sdk.WebView
         android:id="@+id/wv_error"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -15,8 +15,8 @@
         android:background="@android:color/white"
         android:paddingBottom="13dp"
         android:paddingLeft="3dp"
-        android:paddingRight="3dp"
-        android:paddingTop="3dp">
+        android:paddingRight="13dp"
+        android:paddingTop="5dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView_f"
@@ -34,9 +34,9 @@
             android:ellipsize="end"
             android:maxLines="20"
             android:singleLine="true"
-            android:text="箱子高度"
+            android:text="@string/cs1"
             android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/f_date"
@@ -52,8 +52,8 @@
             android:paddingLeft="10dp"
             android:paddingRight="20dp"
             android:singleLine="true"
-            android:text="17/07/12"
-            android:textSize="12sp" />
+            android:text="@string/cs2"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView_author_name"
@@ -62,13 +62,13 @@
             android:layout_alignBottom="@+id/imageView_f"
             android:layout_toEndOf="@+id/imageView_f"
             android:layout_toRightOf="@+id/imageView_f"
-            android:text="Admin"
-            android:textSize="12sp" />
+            android:text="@string/cs3"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/xiangqing1"
-            android:layout_width="40dp"
-            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
             android:layout_alignBottom="@+id/f_date"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -77,13 +77,13 @@
 
         <TextView
             android:id="@+id/xiangqing2"
-            android:layout_width="40dp"
-            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
             android:layout_alignBottom="@+id/f_date"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:background="@drawable/assistor121"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
     </RelativeLayout>
 
     <FrameLayout
@@ -115,15 +115,21 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:drawableLeft="@android:drawable/presence_online"
-                android:text="类型：" />
+                android:padding="3dp"
+                android:text="@string/leixing"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/area"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/errorType"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView13"
                 android:drawableLeft="@android:drawable/presence_online"
-                android:text="区域：" />
+                android:padding="3dp"
+                android:text="@string/quyu"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/factory"
@@ -131,15 +137,21 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/area"
                 android:drawableLeft="@android:drawable/presence_online"
-                android:text="设备：" />
+                android:padding="3dp"
+                android:text="@string/shebei"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/errorTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/factory"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView15"
                 android:drawableLeft="@android:drawable/presence_online"
-                android:text="时间：" />
+                android:padding="3dp"
+                android:text="@string/shijian"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/errorContent"
@@ -147,45 +159,55 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/errorTime"
+                android:layout_below="@+id/textView17"
                 android:drawableLeft="@android:drawable/presence_online"
-                android:text="问题简述：" />
+                android:padding="3dp"
+                android:text="@string/jianshu"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_errorType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/errorType"
-                android:layout_toRightOf="@+id/errorType"
-                android:text="安全" />
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/errorContent"
+                android:layout_toRightOf="@+id/errorContent"
+                android:padding="3dp"
+                android:text="@string/anquan"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_area"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_errorType"
-                android:layout_toEndOf="@+id/errorType"
-                android:layout_toRightOf="@+id/errorType"
-                android:text="烧料" />
+                android:layout_alignLeft="@+id/tv_errorType"
+                android:layout_alignStart="@+id/tv_errorType"
+                android:layout_below="@+id/textView13"
+                android:padding="3dp"
+                android:text="@string/ranliao"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_factory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/factory"
-                android:layout_alignBottom="@+id/factory"
-                android:layout_toEndOf="@+id/area"
-                android:layout_toRightOf="@+id/area"
-                android:text="BTU" />
+                android:layout_alignLeft="@+id/tv_area"
+                android:layout_alignStart="@+id/tv_area"
+                android:layout_below="@+id/tv_area"
+                android:padding="3dp"
+                android:text="@string/cs5"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_errorTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/factory"
-                android:layout_toEndOf="@+id/errorTime"
-                android:layout_toRightOf="@+id/errorTime"
-                android:text="18:05" />
+                android:layout_below="@+id/textView15"
+                android:layout_toEndOf="@+id/errorContent"
+                android:layout_toRightOf="@+id/errorContent"
+                android:padding="3dp"
+                android:text="@string/cs6"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_errorContent"
@@ -194,9 +216,12 @@
                 android:layout_below="@+id/tv_errorTime"
                 android:layout_toEndOf="@+id/errorContent"
                 android:layout_toRightOf="@+id/errorContent"
-                android:text="因消火箱规格不同，消火栓离消火箱底的高度也不一样，大约120MM-220Mm.。因此消火箱离地高度约为980MM-880mm。" />
+                android:padding="3dp"
+                android:text="@string/cs7"
+                android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -207,6 +232,7 @@
                 android:background="#EEEEEF" />
 
             <TextView
+                android:id="@+id/textView18"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -217,6 +243,7 @@
                 android:background="#EEEEEF" />
 
             <TextView
+                android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -227,6 +254,7 @@
                 android:background="#EEEEEF" />
 
             <TextView
+                android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -285,7 +313,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:drawableLeft="@android:drawable/presence_online"
-            android:text="关闭人：" />
+            android:text="@string/guanbi"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_ren"
@@ -294,17 +323,8 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/textView5"
             android:layout_toRightOf="@+id/textView5"
-            android:text="TextView" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/tv_ren"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:background="#EEEEEF" />
+            android:text="@string/cs4"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView9"
@@ -314,7 +334,8 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView5"
             android:drawableLeft="@android:drawable/presence_online"
-            android:text="关闭方案:" />
+            android:text="@string/gbfangan"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_fa"
@@ -323,7 +344,8 @@
             android:layout_below="@+id/textView5"
             android:layout_toEndOf="@+id/textView9"
             android:layout_toRightOf="@+id/textView9"
-            android:text="TextView" />
+            android:text="@string/cs4"
+            android:textSize="16sp" />
     </RelativeLayout>
 
     <Button
@@ -332,6 +354,7 @@
         android:layout_height="45dp"
         android:layout_margin="8dp"
         android:background="@drawable/shape_tv_n"
-        android:text="返回"
-        android:textColor="@android:color/white" />
+        android:text="@string/fanhui"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
 </LinearLayout>

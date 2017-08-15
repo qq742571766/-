@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.SpannedString;
+import android.text.style.AbsoluteSizeSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -37,7 +41,7 @@ import okhttp3.Call;
  * @anthor QQ:742571766
  * @time 2017/5/22 14:15
  */
-public class DisposeFM extends Fragment implements View.OnClickListener,View.OnTouchListener {
+public class DisposeFM extends Fragment implements View.OnClickListener, View.OnTouchListener {
     private View view;
     private TextView xiangqing1;
     private FrameLayout rl;
@@ -49,7 +53,7 @@ public class DisposeFM extends Fragment implements View.OnClickListener,View.OnT
     private boolean on_off = true;
     private EditText et;
     private String url;
-//    private Handler handler = new Handler() {
+    //    private Handler handler = new Handler() {
 //        @Override
 //        public void handleMessage(Message msg) {
 //            if (msg.what == 1 && on_off) {
@@ -126,6 +130,13 @@ public class DisposeFM extends Fragment implements View.OnClickListener,View.OnT
                 .error(R.drawable.logo)
                 .into(imageView);
         et = (EditText) view.findViewById(R.id.et);
+        SpannableString ss = new SpannableString("解决方案");
+        // 新建一个属性对象,设置文字的大小
+        AbsoluteSizeSpan ass = new AbsoluteSizeSpan(14, true);
+        // 附加属性到文本
+        ss.setSpan(ass, 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        // 设置hint
+        et.setHint(new SpannedString(ss)); // 一定要进行转换,否则属性会消失
         TextView textView_title = (TextView) view.findViewById(R.id.textView_title);
         textView_title.setText(josn.getErrorContent());
         TextView f_date = (TextView) view.findViewById(R.id.f_date);

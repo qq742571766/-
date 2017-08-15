@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_tv_btn3"
             android:gravity="center"
-            android:text="TextView"
+            android:text="@string/cs4"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -38,7 +38,7 @@
             android:layout_weight="1"
             android:background="@drawable/shape_tv_btn2"
             android:padding="15dp"
-            android:text="继续观察"
+            android:text="@string/gcing"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 

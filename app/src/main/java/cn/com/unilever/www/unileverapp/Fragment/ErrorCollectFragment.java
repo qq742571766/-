@@ -2,8 +2,6 @@ package cn.com.unilever.www.unileverapp.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -26,19 +24,12 @@ import com.github.abel533.echarts.data.Data;
 import com.github.abel533.echarts.json.GsonOption;
 import com.github.abel533.echarts.series.Pie;
 import com.github.abel533.echarts.style.TextStyle;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
 
 import cn.com.unilever.www.unileverapp.R;
 import cn.com.unilever.www.unileverapp.activity.FunctionActivity;
 import cn.com.unilever.www.unileverapp.config.MyConfig;
-import cn.com.unilever.www.unileverapp.data.list_josn;
-import okhttp3.Call;
 
 /**
  * @class 异常管理
@@ -51,15 +42,6 @@ public class ErrorCollectFragment extends Fragment implements View.OnClickListen
     private View view;
     private HistoryFragment historyFragment;
     private ManagerclassifyFragment managerclassifyFragment;
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            if (msg.what == 1) {
-                initadapter();
-            }
-            super.handleMessage(msg);
-        }
-    };
 
     @Nullable
     @Override
@@ -76,14 +58,14 @@ public class ErrorCollectFragment extends Fragment implements View.OnClickListen
     @Override
     public void onStart() {
         super.onStart();
-        initlogin();
+//        initlogin();
         initWidget();
     }
 
     private void initWidget() {
         WebView mWebView = (WebView) view.findViewById(R.id.layout_arcview_main);
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.addJavascriptInterface(new WebAppInterface((FunctionActivity) getActivity()), "Android");
+        mWebView.addJavascriptInterface(new WebAppInterface(getActivity()), "Android");
         Button btn_dispose = (Button) view.findViewById(R.id.btn_dispose);
         ImageView btn_error = (ImageView) view.findViewById(R.id.btn_error);
         Button btn_history = (Button) view.findViewById(R.id.btn_history);
@@ -98,57 +80,6 @@ public class ErrorCollectFragment extends Fragment implements View.OnClickListen
         webSettings.setSupportZoom(false);
         webSettings.setBuiltInZoomControls(true);
         mWebView.loadUrl("file:///android_asset/H50B7ECBA/www/echart.html");
-    }
-
-    private void initlogin() {
-        OkHttpUtils
-                .get()
-                .url(MyConfig.loginurl)
-                .build()
-                .connTimeOut(30000)
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                    }
-
-                    @Override
-                    public void onResponse(String response, int id) {
-                        Message msg = new Message();
-                        msg.what = 1;
-                        msg.obj = response;
-                        handler.sendMessage(msg);
-                    }
-                });
-    }
-
-    private void initadapter() {
-        OkHttpUtils
-                .get()
-                .url(MyConfig.url + "/ErrorController.sp?method=AndroiderrorList")
-                .build()
-                .connTimeOut(30000)
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                    }
-
-                    @Override
-                    public void onResponse(String response, int id) {
-                        Gson gson = new Gson();
-                        ArrayList<list_josn> list_josn = gson.fromJson(response, new TypeToken<ArrayList<list_josn>>() {
-                        }.getType());
-                        MyConfig.ok = 0;
-                        MyConfig.on = 0;
-                        for (int i = 0; i < list_josn.size(); i++) {
-                            if (list_josn.get(i).getIsSolve().equals("1")) {
-                                MyConfig.ok++;
-                            } else {
-                                MyConfig.on++;
-                            }
-                        }
-
-                    }
-                });
     }
 
     @Override
@@ -189,11 +120,6 @@ public class ErrorCollectFragment extends Fragment implements View.OnClickListen
 
         @JavascriptInterface
         public String getPieChartOptions(int type) {
-//            try {
-//                Thread.sleep(100);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
             GsonOption option = new GsonOption();
             NumberFormat numberFormat = NumberFormat.getInstance();
             numberFormat.setMaximumFractionDigits(2);

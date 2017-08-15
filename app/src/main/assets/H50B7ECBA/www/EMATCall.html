@@ -2,11 +2,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
-    <link href="css/mui.picker.css" rel="stylesheet" />
-    <link href="css/mui.poppicker.css" rel="stylesheet" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/mui.poppicker.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
     <style>
 			.mui-btn {
@@ -58,7 +59,12 @@
 				background-size: cover;
 				background-size: 100% 100%;
 			}
-		</style>
+
+
+
+
+
+    </style>
     <script language="javascript">
 			function javaCallJs(s) {
 				var obj = JSON.parse(s);
@@ -97,108 +103,136 @@
 				}
 				return true;
 			}
-		</script>
+
+
+    </script>
 </head>
 
 <body>
-<form method="get" name="form" onSubmit="return beforeSubmit(this);" style="margin-left: 9px;margin-right: 9px;" width="98%">
+<form method="get" name="form" onSubmit="return beforeSubmit(this);"
+      style="margin-left: 9px;margin-right: 9px;" width="98%">
     <table width="100%">
         <div id="div" class="mui-content div chk_1">
             <tr>
                 <h5 class="mui-content-padded" style="color: #6A6FFF;">答题人信息</h5>
             </tr>
             <tr>
-                <textarea rows="1" name="id" placeholder="工号" maxlength="12" class="mui-btn mui-btn-block" style="margin:0;border-radius:0;resize:none;background-color: #FFFFFF;margin-bottom: 0;" onKeyUp="value=value.replace(/[\W]/g,'')"></textarea>
+                <textarea rows="1" name="id" placeholder="工号" maxlength="12"
+                          class="mui-btn mui-btn-block"
+                          style="margin:0;border-radius:0;resize:none;background-color: #FFFFFF;margin-bottom: 0;"
+                          onKeyUp="value=value.replace(/[\W]/g,'')"></textarea>
 
-                <textarea rows="1" name="name" placeholder="姓名" maxlength="10" class="mui-btn mui-btn-block" style="margin:0;border-radius:0;resize:none;background-color: #FFFFFF;"></textarea>
+                <textarea rows="1" name="name" placeholder="姓名" maxlength="10"
+                          class="mui-btn mui-btn-block"
+                          style="margin:0;border-radius:0;resize:none;background-color: #FFFFFF;"></textarea>
             </tr>
             <h5 class="mui-content-padded" style="color: #6A6FFF;">题目</h5>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input1" name="Fruit" type="checkbox" value="1" width="20%" class="chk_1" /> <label id="label1" for="input1"></label></th>
+                <th><input id="input1" name="Fruit" type="checkbox" value="1" width="20%"
+                           class="chk_1"/> <label id="label1" for="input1"></label></th>
                 <th><span id="span1" class="mui-btn mui-btn-block" width="80%">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input2" name="Fruit" type="checkbox" value="2" width="20%" class="chk_1" /> <label id="label2" for="input2"></label>
+                <th><input id="input2" name="Fruit" type="checkbox" value="2" width="20%"
+                           class="chk_1"/> <label id="label2" for="input2"></label>
                 </th>
                 <th><span id="span2" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input3" name="Fruit" type="checkbox" value="3" width="20%" class="chk_1" /> <label id="label3" for="input3"></label>
+                <th><input id="input3" name="Fruit" type="checkbox" value="3" width="20%"
+                           class="chk_1"/> <label id="label3" for="input3"></label>
                 </th>
                 <th><span id="span3" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input4" name="Fruit" type="checkbox" value="4" width="20%" class="chk_1" /> <label id="label4" for="input4"></label>
+                <th><input id="input4" name="Fruit" type="checkbox" value="4" width="20%"
+                           class="chk_1"/> <label id="label4" for="input4"></label>
                 </th>
                 <th><span id="span4" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input5" name="Fruit" type="checkbox" value="5" width="20%" class="chk_1" /> <label id="label5" for="input5"></label>
+                <th><input id="input5" name="Fruit" type="checkbox" value="5" width="20%"
+                           class="chk_1"/> <label id="label5" for="input5"></label>
                 </th>
                 <th><span id="span5" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input6" name="Fruit" type="checkbox" value="6" width="20%" class="chk_1" /> <label id="label6" for="input6"></label>
+                <th><input id="input6" name="Fruit" type="checkbox" value="6" width="20%"
+                           class="chk_1"/> <label id="label6" for="input6"></label>
                 </th>
                 <th><span id="span6" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input7" name="Fruit" type="checkbox" value="7" width="20%" class="chk_1" /> <label id="label7" for="input7"></label>
+                <th><input id="input7" name="Fruit" type="checkbox" value="7" width="20%"
+                           class="chk_1"/> <label id="label7" for="input7"></label>
                 </th>
                 <th><span id="span7" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input8" name="Fruit" type="checkbox" value="8" width="20%" class="chk_1" /> <label id="label8" for="input8"></label>
+                <th><input id="input8" name="Fruit" type="checkbox" value="8" width="20%"
+                           class="chk_1"/> <label id="label8" for="input8"></label>
                 </th>
                 <th><span id="span8" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input9" name="Fruit" type="checkbox" value="9" width="20%" class="chk_1" /> <label id="label9" for="input9"></label>
+                <th><input id="input9" name="Fruit" type="checkbox" value="9" width="20%"
+                           class="chk_1"/> <label id="label9" for="input9"></label>
                 </th>
                 <th><span id="span9" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input10" name="Fruit" type="checkbox" value="10" width="20%" class="chk_1" /> <label id="label10" for="input10"></label>
+                <th><input id="input10" name="Fruit" type="checkbox" value="10" width="20%"
+                           class="chk_1"/> <label id="label10" for="input10"></label>
                 <th><span id="span10" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input11" name="Fruit" type="checkbox" value="11" width="20%" class="chk_1" /> <label id="label11" for="input11"></label>
+                <th><input id="input11" name="Fruit" type="checkbox" value="11" width="20%"
+                           class="chk_1"/> <label id="label11" for="input11"></label>
                 <th><span id="span11" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input12" name="Fruit" type="checkbox" value="12" width="20%" class="chk_1" /> <label id="label12" for="input12"></label>
+                <th><input id="input12" name="Fruit" type="checkbox" value="12" width="20%"
+                           class="chk_1"/> <label id="label12" for="input12"></label>
                 <th><span id="span12" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input13" name="Fruit" type="checkbox" value="13" width="20%" class="chk_1" /> <label id="label13" for="input13"></label>
+                <th><input id="input13" name="Fruit" type="checkbox" value="13" width="20%"
+                           class="chk_1"/> <label id="label13" for="input13"></label>
                 <th><span id="span13" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input14" name="Fruit" type="checkbox" value="14" width="20%" class="chk_1" /> <label id="label14" for="input14"></label>
+                <th><input id="input14" name="Fruit" type="checkbox" value="14" width="20%"
+                           class="chk_1"/> <label id="label14" for="input14"></label>
                 <th><span id="span14" class="mui-btn mui-btn-block">1</span></th>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <th><input id="input15" name="Fruit" type="checkbox" value="15" width="20%" class="chk_1" /> <label id="label15" for="input15"></label>
+                <th><input id="input15" name="Fruit" type="checkbox" value="15" width="20%"
+                           class="chk_1"/> <label id="label15" for="input15"></label>
                 <th><span id="span15" class="mui-btn mui-btn-block">1</span></th>
             </tr>
 
             <tr bgcolor="#FFFFFF">
                 <th>
-                    <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" color="#BBBBBB" size="3" />
+                    <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" color="#BBBBBB"
+                        size="3"/>
                 </th>
                 <th>
-                    <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" color="#BBBBBB" size="3" />
+                    <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" color="#BBBBBB"
+                        size="3"/>
                 </th>
             </tr>
             <tr bgcolor="#FFFFFF" style="text-align: center;">
-                <th><input id="bug" type="checkbox" width="20%" class="chk_1" onclick="othercheck()" /> <label for="bug"></label>
+                <th><input id="bug" type="checkbox" width="20%" class="chk_1"
+                           onclick="othercheck()"/> <label for="bug"></label>
                 </th>
-                <th><span class="mui-btn mui-btn-block">全选</span></th>
+                <th><span class="mui-btn mui-btn-block">全选/反选</span></th>
             </tr>
         </div>
     </table>
     </br>
-    <input type="submit" value="开始提问" style="background: url(assistor26.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;text-align:center;width: 100%;" onclick="window.Android.upload()" />
+    <input type="submit" value="开始提问"
+           style="background: url(assistor26.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;text-align:center;width: 100%;height:40px"
+           onclick="window.Android.upload()"/>
     <p></p>
     <p></p>
 </form>
@@ -217,7 +251,8 @@
 					}
 				}
 			};
-		</script>
+
+</script>
 </body>
 
 </html>

@@ -32,7 +32,7 @@
                 android:maxLines="5"
                 android:text="@string/title"
                 android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/f_date"
@@ -43,7 +43,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="30dp"
                 android:text="@string/date"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView_author_name"
@@ -55,7 +55,7 @@
                 android:layout_toLeftOf="@+id/textView2"
                 android:layout_toStartOf="@+id/textView2"
                 android:text="@string/author"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -66,7 +66,8 @@
                 android:layout_marginRight="17dp"
                 android:layout_toLeftOf="@+id/f_date"
                 android:layout_toStartOf="@+id/f_date"
-                android:text="\" />
+                android:text="\"
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/imageView2"

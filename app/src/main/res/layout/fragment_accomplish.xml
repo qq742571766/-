@@ -20,7 +20,7 @@
 
             <TextView
                 style="@style/fragment_accomplish_textview_left"
-                android:text="被考人姓名:" />
+                android:text="@string/bkname" />
         </RelativeLayout>
 
         <RelativeLayout style="@style/fragment_accomplish_relativeLayout">
@@ -33,7 +33,7 @@
 
             <TextView
                 style="@style/fragment_accomplish_textview_left"
-                android:text="答题数:" />
+                android:text="@string/datishu" />
         </RelativeLayout>
 
         <RelativeLayout style="@style/fragment_accomplish_relativeLayout">
@@ -48,7 +48,7 @@
                 style="@style/fragment_accomplish_textview_left"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:text="优:" />
+                android:text="@string/you" />
         </RelativeLayout>
 
         <RelativeLayout style="@style/fragment_accomplish_relativeLayout">
@@ -61,7 +61,7 @@
 
             <TextView
                 style="@style/fragment_accomplish_textview_left"
-                android:text="良:" />
+                android:text="@string/liang" />
         </RelativeLayout>
 
         <RelativeLayout style="@style/fragment_accomplish_relativeLayout">
@@ -74,20 +74,7 @@
 
             <TextView
                 style="@style/fragment_accomplish_textview_left"
-                android:text="差:" />
-        </RelativeLayout>
-
-        <RelativeLayout style="@style/fragment_accomplish_relativeLayout">
-
-            <TextView
-                android:id="@+id/textView16"
-                style="@style/fragment_accomplish_textview_right"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
-
-            <TextView
-                style="@style/fragment_accomplish_textview_left"
-                android:text="未回答:" />
+                android:text="@string/cha" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -104,7 +91,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="18dp"
-            android:text="是否通过,请评判:"
+            android:text="@string/shifou"
             android:textSize="15sp" />
 
         <Button
@@ -115,7 +102,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/shape_tv_btn1"
-            android:text="通过"
+            android:text="@string/tongguo"
             android:textColor="@android:color/white" />
 
         <Button
@@ -127,7 +114,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:background="@drawable/shape_tv_btn2"
-            android:text="未通过"
+            android:text="@string/notongguo"
             android:textColor="@android:color/white" />
     </RelativeLayout>
 

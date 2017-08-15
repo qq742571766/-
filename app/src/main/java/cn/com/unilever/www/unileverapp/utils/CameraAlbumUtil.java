@@ -50,25 +50,6 @@ public class CameraAlbumUtil {
         }
         if (isOnNougat()) {
             imageUri = FileProvider.getUriForFile(mContext, "cn.com.unilever.www.unileverapp", outputImage);
-        }
-        if (!isOnKiaKat()) {
-            imageUri = Uri.fromFile(outputImage);
-            if (imageUri.getScheme().toString().compareTo("content") == 0) {
-                Cursor cursor = context.getContentResolver().query(imageUri,
-                        new String[]{MediaStore.Audio.Media.DATA}, null, null, null);
-                if (cursor.moveToFirst()) {
-                    filename = cursor.getString(0);
-                }
-            } else if (imageUri.getScheme().toString().compareTo("file") == 0)         //file:///开头的uri
-            {
-                filename = imageUri.toString();
-                filename = imageUri.toString().replace("file://", "");
-                //替换file://
-                if (!filename.startsWith("/mnt")) {
-                    //加上"/mnt"头
-                    filename += "/mnt";
-                }
-            }
         } else {
             imageUri = Uri.fromFile(outputImage);
         }
@@ -165,18 +146,12 @@ public class CameraAlbumUtil {
 
     //判断运行设备的系统版本是否高于或等于Android7.0
     private static boolean isOnNougat() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return true;
-        }
-        return false;
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.N;
     }
 
     //判断运行设备的系统版本是否高于或等于Android4.4
     private static boolean isOnKiaKat() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            return true;
-        }
-        return false;
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
     }
 
     /**
