@@ -5,12 +5,12 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <WebView
+    <com.tencent.smtt.sdk.WebView
         android:id="@+id/wv_emat_ok"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <Button
+    <TextView
         android:id="@+id/btn_emat_ok"
         android:layout_width="0dp"
         android:layout_height="0dp" />

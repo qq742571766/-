@@ -10,9 +10,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -24,6 +21,9 @@ import com.github.abel533.echarts.data.Data;
 import com.github.abel533.echarts.json.GsonOption;
 import com.github.abel533.echarts.series.Pie;
 import com.github.abel533.echarts.style.TextStyle;
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 import java.text.NumberFormat;
 

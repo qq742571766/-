@@ -44,19 +44,25 @@ import okhttp3.Call;
  * @anthor QQ:742571766
  * @time 2017/5/17 14:25
  */
-public class AnswerFragment extends Fragment implements View.OnClickListener, View.OnTouchListener {
-    private View view;
-    private WebView webView;
-    private Button button;
+public class AnswerFragment extends Fragment implements View.OnTouchListener {
     private String s;
+    private View view;
+    private Context context;
+    private WebView webView;
     private ErrorCollectFragment errorcollectfragment;
     private AnswerFragment fragment;
-    private Timer timer = new Timer();
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
+            if (msg.what == 3) {
+                webView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        webView.loadUrl("javascript:javaCallJs(" + "'" + s + "'" + ")");
+                    }
+                });
+            }
             if (msg.what == 2) {
                 try {
-                    webView.loadUrl("file:///android_asset/H50B7ECBA/www/EMATCall.html");
                     JSONArray jsonArray = new JSONArray((String) msg.obj);
                     s = "{" +
                             "\"" + "a0" + "\"" + ":" + jsonArray.length() + ",";
@@ -71,26 +77,16 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
                     }
                     view.findViewById(R.id.EMATtext).setVisibility(View.GONE);
                     s += "}";
+                    Message message = new Message();
+                    message.what = 3;
+                    handler.sendMessage(message);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-            switch (msg.what) {
-                case 1:
-                    button.performClick();
-                    break;
-            }
             super.handleMessage(msg);
         }
     };
-    private TimerTask task = new TimerTask() {
-        public void run() {
-            Message message = new Message();
-            message.what = 1;
-            handler.sendMessage(message);
-        }
-    };
-    private Context context;
 
     @Override
     public void onAttach(Context context) {
@@ -140,8 +136,6 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
 
     private void initview() {
         webView = (WebView) view.findViewById(R.id.wv_emat);
-        button = (Button) view.findViewById(R.id.aaaa);
-        button.setVisibility(View.GONE);
         WebSettings webSettings = webView.getSettings();
         //设置支持javaScript脚步语言
         webSettings.setJavaScriptEnabled(true);
@@ -153,6 +147,12 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
         webView.loadUrl(MyConfig.loginurl);
         //支持屏幕缩放
         webSettings.setSupportZoom(false);
+        webView.post(new Runnable() {
+            @Override
+            public void run() {
+                webView.loadUrl("file:///android_asset/H50B7ECBA/www/EMATCall.html");
+            }
+        });
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -216,15 +216,6 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
                 return super.shouldOverrideUrlLoading(view, url);
             }
         });
-        timer.schedule(task, 0, 100);
-        button.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        if (s != null) {
-            webView.loadUrl("javascript:javaCallJs(" + "'" + s + "'" + ")");
-        }
     }
 
     @Override
@@ -235,7 +226,6 @@ public class AnswerFragment extends Fragment implements View.OnClickListener, Vi
         MyConfig.DadNumber = 0;
         initview();
         initdata();
-        button.performClick();
     }
 
     @Override

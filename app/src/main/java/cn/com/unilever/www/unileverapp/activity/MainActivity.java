@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Intent intent = new Intent(MainActivity.this, FunctionActivity.class);
                         startActivity(intent);
                         MainActivity.this.finish();
-                        progressDialog.dismiss();
+//                        progressDialog.dismiss();
                     } else {
                         Snackbar.make(etUsername, "登录失败,请检查登录信息", Snackbar.LENGTH_SHORT).show();
                         progressDialog.dismiss();

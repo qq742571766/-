@@ -13,11 +13,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,7 +38,7 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
     private int i = 0;
     private View view;
     private WebView webView;
-    private Button button;
+    private TextView button;
     private Context context;
     private Timer timer = new Timer();
     private Toolbar toolbar;
@@ -110,7 +112,7 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
                 return super.shouldOverrideUrlLoading(view, url);
             }
         });
-        button = (Button) view.findViewById(R.id.btn_emat_ok);
+        button = (TextView) view.findViewById(R.id.btn_emat_ok);
         timer.schedule(task, 0, 10);
         button.setOnClickListener(this);
         button.setVisibility(View.GONE);
