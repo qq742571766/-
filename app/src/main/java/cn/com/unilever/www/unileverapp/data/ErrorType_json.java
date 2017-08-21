@@ -10,15 +10,10 @@ public class ErrorType_json {
     private String keyId;
     private String id;
     private String name;
-    private String pId;
     private String key;
 
     public String getKeyId() {
         return keyId;
-    }
-
-    public void setKeyId(String keyId) {
-        this.keyId = keyId;
     }
 
     public String getId() {
@@ -35,14 +30,6 @@ public class ErrorType_json {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getpId() {
-        return pId;
-    }
-
-    public void setpId(String pId) {
-        this.pId = pId;
     }
 
     public String getKey() {

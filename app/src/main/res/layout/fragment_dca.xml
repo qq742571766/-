@@ -18,13 +18,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <ListView
             android:id="@+id/lv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="11dp"
+            android:layout_margin="9dp"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:padding="3dp"
@@ -34,7 +35,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_margin="5dp"
+        android:layout_weight="0"
         android:orientation="horizontal">
 
         <Button

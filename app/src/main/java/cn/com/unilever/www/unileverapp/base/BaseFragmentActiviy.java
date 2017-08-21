@@ -26,8 +26,7 @@ public class BaseFragmentActiviy extends AppCompatActivity {
                 return;
             }
             Fragment frag = fm.getFragments().get(index);
-            if (frag == null) {
-            } else {
+            if (frag != null) {
                 handleResult(frag, requestCode, resultCode, data);
             }
         }

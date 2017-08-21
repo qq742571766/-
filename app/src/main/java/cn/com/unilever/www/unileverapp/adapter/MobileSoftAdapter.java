@@ -13,14 +13,12 @@ import cn.com.unilever.www.unileverapp.info.ObInfo;
 public class MobileSoftAdapter extends MyBaseAdapter<ObInfo> {
     public Context context;
     private OnCheckedChangeListener l = new OnCheckedChangeListener() {
-
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             int position = (Integer) buttonView.getTag();
             ObInfo info = datas.get(position);
             info.tv_or = datas.get(position).tv_or;
             datas.add(position, info);
-
         }
     };
 
@@ -44,7 +42,7 @@ public class MobileSoftAdapter extends MyBaseAdapter<ObInfo> {
         return convertView;
     }
 
-    class ViewHolder {
+    private class ViewHolder {
         TextView tv_or;
     }
 }

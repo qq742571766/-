@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -30,8 +29,6 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import cn.com.unilever.www.unileverapp.R;
 import cn.com.unilever.www.unileverapp.activity.FunctionActivity;

@@ -92,7 +92,6 @@ public class FunctionActivity extends BaseFragmentActiviy {
         }
         headerLayout = navigationView.getHeaderView(0);
         SharedPreferences sp = getSharedPreferences("logininformation", Context.MODE_PRIVATE);
-        String userKey = sp.getString("userKey", null);
         String username = sp.getString("username", null);
         TextView tv_name = (TextView) headerLayout.findViewById(R.id.tv_name);
         tv_name.setText(username);
@@ -144,10 +143,11 @@ public class FunctionActivity extends BaseFragmentActiviy {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         if (!(fragment instanceof EMATok) && !(fragment instanceof EMATAccomplish) && !(fragment instanceof GradeFragment) && !(fragment instanceof ErrorCollectFragment) && !(fragment instanceof AnswerFragment) && !(fragment instanceof ManagerclassifyFragment)) {
+
             transaction.addToBackStack(null);
         }
         if (fragment != null) {
-            if (fragment instanceof DisposeFM || fragment instanceof HistoryFM) {
+            if (fragment instanceof DisposeFM || fragment instanceof HistoryFM || fragment instanceof AnswerFragment) {
                 transaction.replace(R.id.fl_commcontent_main, fragment);
             } else {
                 transaction.add(R.id.fl_commcontent_main, fragment);

@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.util.AttributeSet;
 
 /**
- * @class
+ * @class Edittext
  * @name 林郝
  * @anthor QQ:742571766
  * @time 2017/8/6 20:33

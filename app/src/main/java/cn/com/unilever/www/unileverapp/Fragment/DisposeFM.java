@@ -46,38 +46,18 @@ public class DisposeFM extends Fragment implements View.OnClickListener, View.On
     private TextView xiangqing1;
     private FrameLayout rl;
     private TextView xiangqing2;
-    private RelativeLayout rl_title;
-    private Button button;
     private ErrorCollectFragment dm;
     private list_josn josn;
-    private boolean on_off = true;
     private EditText et;
-    private String url;
-    //    private Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            if (msg.what == 1 && on_off) {
-//                errorclose();
-//                on_off = false;
-//            }
-//            super.handleMessage(msg);
-//        }
-//    };
     private ProgressDialog progressDialog;
 
     private void errorclose() {
         SharedPreferences sp = getActivity().getSharedPreferences("logininformation", Context.MODE_PRIVATE);
         String usernames = sp.getString("username", null);
         if (et.getText().toString().length() > 0) {
-            url = MyConfig.url + "/ErrorController.sp?method=errorclose&closeUserId="
+            String url = MyConfig.url + "/ErrorController.sp?method=errorclose&closeUserId="
                     + usernames + "&errorRole=1&key=" + josn.getKey() + "&closeTime=" + SystemTimeUtil.getErrorDate()
                     + "&error_close_idea=" + et.getText().toString();
-//            try {
-//                url = URLDecoder.decode(URLDecoder.decode(url, "UTF-8"));
-//                Log.d("errors", url);
-//            } catch (UnsupportedEncodingException e) {
-//                e.printStackTrace();
-//            }
             OkHttpUtils
                     .get()
                     .url(url)
@@ -157,9 +137,9 @@ public class DisposeFM extends Fragment implements View.OnClickListener, View.On
         xiangqing1 = (TextView) view.findViewById(R.id.xiangqing1);
         xiangqing2 = (TextView) view.findViewById(R.id.xiangqing2);
         rl = (FrameLayout) view.findViewById(R.id.rl);
-        rl_title = (RelativeLayout) view.findViewById(R.id.rl_title);
+        RelativeLayout rl_title = (RelativeLayout) view.findViewById(R.id.rl_title);
         rl_title.setOnClickListener(this);
-        button = (Button) view.findViewById(R.id.button);
+        Button button = (Button) view.findViewById(R.id.button);
         button.setOnClickListener(this);
     }
 

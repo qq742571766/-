@@ -37,7 +37,7 @@ public class MyApplication extends Application {
         AndPermission.with(this)
                 .requestCode(100)
                 .permission(Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.CAMERA,Manifest.permission.WAKE_LOCK,
+                        Manifest.permission.CAMERA, Manifest.permission.WAKE_LOCK,
                         Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_LOGS,
                         Manifest.permission.CHANGE_NETWORK_STATE, Manifest.permission.CHANGE_WIFI_STATE,
                         Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_WIFI_STATE,

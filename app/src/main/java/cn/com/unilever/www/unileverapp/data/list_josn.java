@@ -62,16 +62,8 @@ public class list_josn implements Parcelable {
         return createUserId;
     }
 
-    public void setCreateUserId(String createUserId) {
-        this.createUserId = createUserId;
-    }
-
     public String getErrorTime() {
         return errorTime;
-    }
-
-    public void setErrorTime(String errorTime) {
-        this.errorTime = errorTime;
     }
 
     public String getErrorType() {
@@ -86,24 +78,12 @@ public class list_josn implements Parcelable {
         return baseFactory;
     }
 
-    public void setBaseFactory(String baseFactory) {
-        this.baseFactory = baseFactory;
-    }
-
     public String getErrorDate() {
         return errorDate;
     }
 
-    public void setErrorDate(String errorDate) {
-        this.errorDate = errorDate;
-    }
-
     public String getErrorContent() {
         return errorContent;
-    }
-
-    public void setErrorContent(String errorContent) {
-        this.errorContent = errorContent;
     }
 
     public String getKey() {
@@ -118,24 +98,12 @@ public class list_josn implements Parcelable {
         return closeUserId;
     }
 
-    public void setCloseUserId(String closeUserId) {
-        this.closeUserId = closeUserId;
-    }
-
     public String getErrorRole() {
         return errorRole;
     }
 
-    public void setErrorRole(String errorRole) {
-        this.errorRole = errorRole;
-    }
-
     public String getError_close_idea() {
         return error_close_idea;
-    }
-
-    public void setError_close_idea(String error_close_idea) {
-        this.error_close_idea = error_close_idea;
     }
 
     public String getUrl() {
@@ -148,10 +116,6 @@ public class list_josn implements Parcelable {
 
     public String getIsSolve() {
         return isSolve;
-    }
-
-    public void setIsSolve(String isSolve) {
-        this.isSolve = isSolve;
     }
 
     @Override

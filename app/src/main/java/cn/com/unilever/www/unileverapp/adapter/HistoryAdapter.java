@@ -2,10 +2,10 @@ package cn.com.unilever.www.unileverapp.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -18,7 +18,6 @@ import cn.com.unilever.www.unileverapp.data.list_josn;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.mViewHolder> {
-    private static ImageView views;
     private List<list_josn> datas;
     private OnButtonClickListener listener = null;
     private Context context;
@@ -53,6 +52,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.mViewHol
                 .placeholder(R.drawable.logo)
                 .error(R.drawable.logo)
                 .into(holder.thumbnail_pic_s);
+        Log.d("iii", josn.url);
         holder.title.setText(josn.getErrorContent());
         holder.author_name.setText(josn.getCreateUserId());
         holder.date.setText(josn.getErrorTime());
@@ -61,10 +61,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.mViewHol
     @Override
     public int getItemCount() {
         if (datas == null || datas.size() <= 0) {
+            return 0;
         } else {
             return datas.size();
         }
-        return 0;
     }
 
     public void setOnButtonClickListener(OnButtonClickListener l) {
@@ -93,7 +93,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.mViewHol
             date = (TextView) itemView.findViewById(R.id.f_date);
             //上传者
             author_name = (TextView) itemView.findViewById(R.id.textView_author_name);
-            HistoryAdapter.views = thumbnail_pic_s;
         }
     }
 }

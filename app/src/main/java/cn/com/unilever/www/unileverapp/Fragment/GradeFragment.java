@@ -13,11 +13,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -118,7 +119,7 @@ public class GradeFragment extends Fragment implements View.OnClickListener, Vie
             }
         });
         button = (Button) view.findViewById(R.id.btn_grade);
-        timer.schedule(task, 0, 10);
+        timer.schedule(task, 0, 100);
         button.setOnClickListener(this);
         button.setVisibility(View.GONE);
     }

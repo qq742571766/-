@@ -29,11 +29,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 import cn.com.unilever.www.unileverapp.R;
 import cn.com.unilever.www.unileverapp.activity.FunctionActivity;
-import cn.com.unilever.www.unileverapp.activity.MainActivity;
 import cn.com.unilever.www.unileverapp.adapter.MobileSoftAdapter;
 import cn.com.unilever.www.unileverapp.info.ObInfo;
 import cn.com.unilever.www.unileverapp.config.MyConfig;
@@ -287,7 +285,7 @@ public class ObservationFragment extends Fragment implements View.OnTouchListene
                                     j++;
                                 }
                             }
-                            if (contentlist.size()==0){
+                            if (contentlist.size() == 0) {
                                 if (smat == null) {
                                     smat = new SMATFragment();
                                 }

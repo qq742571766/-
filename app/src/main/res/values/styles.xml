@@ -1,6 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -12,14 +11,6 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <!--
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-            android:background="@android:drawable/editbox_background_normal"
-        android:padding="15dp"
-                android:paddingTop="2dp"
-        -->
     <style name="fragment_accomplish_relativeLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
@@ -30,13 +21,7 @@
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">10dp</item>
     </style>
-    <!--
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-    -->
+
     <style name="fragment_accomplish_textview_left">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -44,14 +29,7 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">15sp</item>
     </style>
-    <!--
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-    -->
+
     <style name="fragment_accomplish_textview_right">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -60,6 +38,7 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">15sp</item>
     </style>
+
     <style name="Toolbar" parent="android:Widget">
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textSize">25sp</item>

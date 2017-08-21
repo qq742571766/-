@@ -14,15 +14,12 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static android.content.ContentValues.TAG;
-
 //图片加载及缓存的工具类
 //  url----图片 ====存到内存，存到文件
 public class ImageLoaderUtil {
     //key：根据什么去取存的东西,  value：要存的东西
     private static LruCache<String, Bitmap> lruCache;
     private File path;
-
     public ImageLoaderUtil(Context context) {
         lruCache = new LruCache<String, Bitmap>(4 * 1024 * 1024) {
             //计算每张图片的大小
@@ -36,7 +33,6 @@ public class ImageLoaderUtil {
             path.mkdirs();
         }
     }
-
     public Bitmap loadImage(String url, OnLoadImageListener l) {
         //Bitmap bitmap = null;
         //内存取
@@ -53,11 +49,9 @@ public class ImageLoaderUtil {
         getFromNet(url, l);
         return null;
     }
-
     private void saveToCache(String url, Bitmap bitmap) {
         lruCache.put(url, bitmap);
     }
-
     private Bitmap getFromCache(String url) {
         if (url != null) {
             return lruCache.get(url);
@@ -105,7 +99,7 @@ public class ImageLoaderUtil {
         task.execute(url);
     }
 
-    public interface OnLoadImageListener {
+    interface OnLoadImageListener {
         void onImageLoadOK(String url, Bitmap bitmap);
 
         void onImageLoadError(String url);

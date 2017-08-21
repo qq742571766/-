@@ -20,9 +20,9 @@ public class MyConfig {
     //异常类型
     public static String type = "TAG";
     //url
-    public static String url = "http://192.168.10.20:8080/HiperMES";
+    public static String url = "http://10.66.1.123:8090/HiperMATICMES";
     //登录url
-    public static String loginurl = "http://192.168.10.20:8080/HiperMES/login.sp?method=appLogin&loginName=admin&password=admin";
+    public static String loginurl = "http://10.66.1.123:8090/HiperMATICMES/login.sp?method=appLogin&loginName=admin&password=admin";
     //SMAT 区域
     public static String area;
     //smat异常数量

@@ -15,7 +15,6 @@
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
         android:paddingTop="8dp"
-        android:text="texts"
         android:textSize="13sp" />
 
     <!--<CheckBox-->

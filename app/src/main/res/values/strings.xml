@@ -49,7 +49,17 @@
     <string name="shifou">是否通过,请评判:</string>
     <string name="tongguo">通过</string>
     <string name="notongguo">未通过</string>
-    <string name="ing">题库加载中...</string>
-    <string name="lbing">列表加载中...</string>
+    <string name="ing">题库加载中…</string>
+    <string name="lbing">列表加载中…</string>
     <string name="gcing">继续观察</string>
+    <string name="logo">logo</string>
+    <string name="titles">联合利华合肥YG工厂</string>
+    <string name="imageview">ImageView</string>
+    <string name="endgc">结束观察</string>
+    <string name="zg">主管上报</string>
+    <string name="yg">员工上报</string>
+    <string name="qy">区域</string>
+    <string name="bb">班别</string>
+    <string name="bgcr">被观察人</string>
+    <string name="g">\\</string>
 </resources>

@@ -1,6 +1,5 @@
 package cn.com.unilever.www.unileverapp.Fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -39,7 +38,6 @@ import okhttp3.Call;
  */
 public class DCAFragment extends Fragment implements View.OnClickListener, View.OnTouchListener {
     private View view;
-    private Context context;
     private TextView tv_area;
     private TextView tv_class;
     private MyEdittext et_person;
@@ -81,12 +79,6 @@ public class DCAFragment extends Fragment implements View.OnClickListener, View.
             }
         }
     };
-
-    @Override
-    public void onAttach(Context context) {
-        this.context = context;
-        super.onAttach(context);
-    }
 
     @Nullable
     @Override

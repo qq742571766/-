@@ -13,7 +13,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +41,6 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
     private Context context;
     private Timer timer = new Timer();
     private Toolbar toolbar;
-    private String s;
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -96,8 +94,7 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
                 String[] urls = url.split("=");
                 SharedPreferences sp = context.getSharedPreferences("grade", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
-                if (urls.length == 1) {
-                } else {
+                if (urls.length != 1) {
                     //通过sp储存答案
                     if (urls[1] != null) {
                         editor.putString(i + "", urls[1]);
@@ -113,7 +110,7 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
             }
         });
         button = (TextView) view.findViewById(R.id.btn_emat_ok);
-        timer.schedule(task, 0, 10);
+        timer.schedule(task, 0, 100);
         button.setOnClickListener(this);
         button.setVisibility(View.GONE);
         toolbar = (Toolbar) getActivity().findViewById(R.id.mToolbar);
@@ -127,7 +124,7 @@ public class EMATok extends Fragment implements View.OnClickListener, View.OnTou
                 Toast.makeText(context, "无上一题", Toast.LENGTH_SHORT).show();
                 i = 0;
             } else {
-                s = MyConfig.problem.get(MyConfig.sourceStrArray.get(i));
+                String s = MyConfig.problem.get(MyConfig.sourceStrArray.get(i));
                 webView.loadUrl("javascript:javaCallJs(" + "'" + s + "'" + ")");
             }
         }

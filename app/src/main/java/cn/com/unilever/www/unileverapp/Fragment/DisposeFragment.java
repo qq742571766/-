@@ -110,7 +110,7 @@ public class DisposeFragment extends Fragment implements View.OnTouchListener {
                         ArrayList<list_josn> list_josn = gson.fromJson(response, new TypeToken<ArrayList<list_josn>>() {
                         }.getType());
                         list = new ArrayList<>();
-                        list_josn josn = null;
+                        list_josn josn;
                         for (int i = 0; i < list_josn.size(); i++) {
                             josn = new list_josn();
                             if (list_josn.get(i).getIsSolve().equals("1")) {

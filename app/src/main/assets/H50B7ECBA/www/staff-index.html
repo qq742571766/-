@@ -1,44 +1,40 @@
 ﻿<!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
-	<link href="css/mui.picker.css" rel="stylesheet" />
-	<link href="css/mui.poppicker.css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
-	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/mui.poppicker.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style>
 			.mui-btn {
 				font-size: 14px;
 				padding: 8px;
 				margin: 3px;
 			}
-
 			h5.mui-content-padded:first-child {
 				margin-top: 12px !important;
 			}
-
 			.ui-alert {
 				text-align: center;
 				padding: 20px;
 				font-size: 16px;
 			}
-
 			.div {
 				font-size: 14px;
 				overflow-y: visible;
 				overflow-x: visible;
 			}
-
 			.thWidthAndHeight {
 				width: 80px;
 				height: 20px;
 			}
-		</style>
-	<script language="javascript">
+    </style>
+    <script language="javascript">
 			$(function() {
 				var date = new Date();
 				var seperator1 = "-";
@@ -59,11 +55,9 @@
 					"T" + date.getHours() + seperator2 + date.getMinutes();
 				document.getElementById("errorTime").value = currentdate;
 			});
-
 			function javaCallJs(s, a, files) {
-				document.getElementById('myForm').action = 'http://192.168.10.21:8080/HiperMES/ErrorController.sp?method=saveError&error_man_type=2&createUserId=' + s + '&category=' + a + '&url=' + files;
+				document.getElementById('myForm').action = 'http://10.66.1.123:8090/HiperMATICMES/ErrorController.sp?method=saveError&error_man_type=2&createUserId=' + s + '&category=' + a + '&url=' + files;
 			}
-
 			function beforeSubmit(myForm) {
 				if(myForm.errorUserId.value == '') {
 					myForm.id.focus();
@@ -103,90 +97,119 @@
 			//URI: /storage/emulated/0/Android/data/cn.com.unilever.www.unileverapp/cache/12.png
 			//uri:content://com.android.contacts/contacts
 			//URI: /storage/sdcard0/Android/data/cn.com.unilever.www.unileverapp/cache/11.png
-		</script>
+    </script>
 </head>
-
 <body>
-<form id="myForm" onSubmit="return beforeSubmit(this);" method="post" style="width: 97%;margin-left:5px;" accept-charset="utf-8" enctype="multipart/form-data">
-	<div style="text-align: center;">
-		<img style="margin-top: 10px;" id="img" src="pf.png" width="60px" height="60px" onclick="sendInfoToAndroid()">
-		<h5 class="mui-content-padded" style="">请选择图片</h5>
-	</div>
-	<div class="mui-content div">
-		<table width="100%">
-			<tr bgcolor="#FFFFFF" style="height: 40px;">
-				<th class="thWidthAndHeight"><input readonly="readonly" type="text" value='类型' class="mui-btn mui-btn-block"></th>
-				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='errorType' placeholder='请选择' id='showUserPicker0' class="mui-btn mui-btn-block"></th>
-				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
-				</th>
-			</tr>
-			<tr>
-				<th>
-					<p></p>
-				</th>
-			</tr>
-			<tr bgcolor="#FFFFFF" style="height: 40px;">
-				<th><input readonly="readonly" type="text" value='区域类型' class="mui-btn mui-btn-block">
-				</th>
-				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='area' placeholder='请选择' id='showUserPicker1' class="mui-btn mui-btn-block"></th>
-				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
-				</th>
-			</tr>
-			<tr>
-				<th>
-					<p></p>
-				</th>
-			</tr>
-			<tr bgcolor="#FFFFFF" style="height: 40px;">
-				<th><input readonly="readonly" type="text" value='设备' class="mui-btn mui-btn-block">
-				</th>
-				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='factory' placeholder='请选择' id='showUserPicker3' class="mui-btn mui-btn-block"></th>
-				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
-				</th>
-			</tr>
-			<tr>
-				<th>
-					<p></p>
-				</th>
-			</tr>
-			<tr bgcolor="#FFFFFF" style="height: 40px;">
-				<th><input readonly="readonly" type="text" value='班次' class="mui-btn mui-btn-block">
-				</th>
-				<th><input style="text-align: right;" autocomplete="off" onpaste="return false" readonly="readonly" type="text" name='workerClass' placeholder='请选择' id='showUserPicker5' class="mui-btn mui-btn-block"></th>
-				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
-				</th>
-			</tr>
-			<tr>
-				<th>
-					<p></p>
-				</th>
-			</tr>
-			<tr bgcolor="#FFFFFF" style="margin-right: 0px;">
-				<th><input readonly="readonly" type="text" value='时间' class="mui-btn mui-btn-block">
-				</th>
-				<th><input id="errorTime" type="datetime-local" style="padding-top:9px;border: 0px solid transparent;background-color: transparent;margin: 0px" name="errorTime" /></th>
-				<th><img src="ccc.png" style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;" />
-				</th>
-			</tr>
-		</table>
-		<tr>
-			<th>
-				<p></p>
-			</th>
-		</tr>
-		<textarea placeholder="责任人员" class="div" autocomplete="off" id="errorUserId" name="errorUserId" onpaste="return false" required="required" style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 40px;" maxlength="80"></textarea>
-		<p></p>
-		<textarea placeholder="相关人员" class="div" autocomplete="off" id="otherUserId" name="otherUserId" onpaste="return false" required="required" style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 40px;" maxlength="80"></textarea>
-		<p></p>
-		<textarea placeholder="问题简述" class="div" autocomplete="off" id="errorContent" name="errorContent" onpaste="return false" required="required" style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 100px;" maxlength="80"></textarea>
-		<script src="js/mui.min.js"></script>
-		<script src="js/mui.picker.js"></script>
-		<script src="js/mui.poppicker.js"></script>
-	</div>
-	<br/>
-	<div style="text-align: center">
-		<input class="mui-btn mui-btn-block" type="submit" style="height:40px;background: url(assistor26.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;text-align:center;margin-bottom: 5px;" onclick="window.Android.upload()" />
-	</div>
+<form id="myForm" onSubmit="return beforeSubmit(this);" method="post"
+      style="width: 97%;margin-left:5px;" accept-charset="utf-8" enctype="multipart/form-data">
+    <div style="text-align: center;">
+        <img style="margin-top: 10px;" id="img" src="pf.png" width="60px" height="60px"
+             onclick="sendInfoToAndroid()">
+        <h5 class="mui-content-padded" style="">请选择图片</h5>
+    </div>
+    <div class="mui-content div">
+        <table width="100%">
+            <tr bgcolor="#FFFFFF" style="height: 40px;">
+                <th class="thWidthAndHeight"><input readonly="readonly" type="text" value='类型'
+                                                    class="mui-btn mui-btn-block"></th>
+                <th><input style="text-align: right;" autocomplete="off" onpaste="return false"
+                           readonly="readonly" type="text" name='errorType' placeholder='请选择'
+                           id='showUserPicker0' class="mui-btn mui-btn-block"></th>
+                <th><img src="ccc.png"
+                         style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;"/>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <p></p>
+                </th>
+            </tr>
+            <tr bgcolor="#FFFFFF" style="height: 40px;">
+                <th><input readonly="readonly" type="text" value='区域类型'
+                           class="mui-btn mui-btn-block">
+                </th>
+                <th><input style="text-align: right;" autocomplete="off" onpaste="return false"
+                           readonly="readonly" type="text" name='area' placeholder='请选择'
+                           id='showUserPicker1' class="mui-btn mui-btn-block"></th>
+                <th><img src="ccc.png"
+                         style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;"/>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <p></p>
+                </th>
+            </tr>
+            <tr bgcolor="#FFFFFF" style="height: 40px;">
+                <th><input readonly="readonly" type="text" value='设备' class="mui-btn mui-btn-block">
+                </th>
+                <th><input style="text-align: right;" autocomplete="off" onpaste="return false"
+                           readonly="readonly" type="text" name='factory' placeholder='请选择'
+                           id='showUserPicker3' class="mui-btn mui-btn-block"></th>
+                <th><img src="ccc.png"
+                         style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;"/>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <p></p>
+                </th>
+            </tr>
+            <tr bgcolor="#FFFFFF" style="height: 40px;">
+                <th><input readonly="readonly" type="text" value='班次' class="mui-btn mui-btn-block">
+                </th>
+                <th><input style="text-align: right;" autocomplete="off" onpaste="return false"
+                           readonly="readonly" type="text" name='workerClass' placeholder='请选择'
+                           id='showUserPicker5' class="mui-btn mui-btn-block"></th>
+                <th><img src="ccc.png"
+                         style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;"/>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <p></p>
+                </th>
+            </tr>
+            <tr bgcolor="#FFFFFF" style="margin-right: 0px;">
+                <th><input readonly="readonly" type="text" value='时间' class="mui-btn mui-btn-block">
+                </th>
+                <th><input id="errorTime" type="datetime-local"
+                           style="padding-top:9px;border: 0px solid transparent;background-color: transparent;margin: 0px"
+                           name="errorTime"/></th>
+                <th><img src="ccc.png"
+                         style="width: 10px;height: 17px;padding-top: 6px;padding-right: 5px;"/>
+                </th>
+            </tr>
+        </table>
+        <tr>
+            <th>
+                <p></p>
+            </th>
+        </tr>
+        <textarea placeholder="责任人员" class="div" autocomplete="off" id="errorUserId"
+                  name="errorUserId" onpaste="return false" required="required"
+                  style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 40px;"
+                  maxlength="80"></textarea>
+        <p></p>
+        <textarea placeholder="相关人员" class="div" autocomplete="off" id="otherUserId"
+                  name="otherUserId" onpaste="return false" required="required"
+                  style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 40px;"
+                  maxlength="80"></textarea>
+        <p></p>
+        <textarea placeholder="问题简述" class="div" autocomplete="off" id="errorContent"
+                  name="errorContent" onpaste="return false" required="required"
+                  style="border: 1px solid rgba(0, 0, 0,0);border-radius: 0;resize:none;background-color: #FFFFFF;margin: 0;height: 100px;"
+                  maxlength="80"></textarea>
+        <script src="js/mui.min.js"></script>
+        <script src="js/mui.picker.js"></script>
+        <script src="js/mui.poppicker.js"></script>
+    </div>
+    <br/>
+    <div style="text-align: center">
+        <input class="mui-btn mui-btn-block" type="submit"
+               style="height:40px;background: url(assistor26.png);background-repeat: no-repeat;background-size:cover;background-size:100% 100%;text-align:center;margin-bottom: 5px;"
+               onclick="window.Android.upload()"/>
+    </div>
 </form>
 <script type="text/javascript">
 			//----------------------
@@ -597,30 +620,24 @@
 			function sendInfoToAndroid() {
 				window.Android.picture();
 			}
-
 			function setImag(file) {
 				document.getElementById("img").src = file;
 			}
-
 			function selectFocus() {
 				document.getElementById("select").setAttribute("size", "5");
 			}
-
 			function selectClick() {
 				document.getElementById("select").removeAttribute("size");
 				document.getElementById("select").blur();
 				this.setAttribute("selected", "");
 			}
-
 			function selectStu() {
 				document.getElementById('myForm').action = "ctl.jsp?op=select";
 				document.getElementById("myForm").submit();
 			}
-
 			function form(myForm) {
 				window.Android.submit(myForm.toString());
 			}
-		</script>
+</script>
 </body>
-
 </html>

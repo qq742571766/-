@@ -39,7 +39,7 @@ import cn.com.unilever.www.unileverapp.utils.CameraAlbumUtil;
  * @time 2017/5/17 14:24
  */
 public class ErrorFragment extends Fragment implements View.OnTouchListener {
-    private final static String url = "file:///android_asset/H50B7ECBA/www/index.html";
+    //    private final static String url = "file:///android_asset/H50B7ECBA/www/index.html";
     private final static String staff_url = "file:///android_asset/H50B7ECBA/www/staff-index.html";
     private View view;
     private CameraAlbumUtil util;
@@ -231,23 +231,28 @@ public class ErrorFragment extends Fragment implements View.OnTouchListener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    if (MyConfig.type.equals("DCA")) {
-                        MyConfig.num++;
-                        if (dca == null) {
-                            dca = new DCAObservationFragment();
-                        }
-                        ((FunctionActivity) getActivity()).changFragment(dca);
-                    } else if (MyConfig.type.equals("SMAT")) {
-                        MyConfig.num++;
-                        if (fragment1 == null) {
-                            fragment1 = new ObservationFragment();
-                        }
-                        ((FunctionActivity) getActivity()).changFragment(fragment1);
-                    } else if (MyConfig.type.equals("审计") || MyConfig.type.equals("TAG")) {
-                        if (fragment == null) {
-                            fragment = new ManagerclassifyFragment();
-                        }
-                        ((FunctionActivity) getActivity()).changFragment(fragment);
+                    switch (MyConfig.type) {
+                        case "DCA":
+                            MyConfig.num++;
+                            if (dca == null) {
+                                dca = new DCAObservationFragment();
+                            }
+                            ((FunctionActivity) getActivity()).changFragment(dca);
+                            break;
+                        case "SMAT":
+                            MyConfig.num++;
+                            if (fragment1 == null) {
+                                fragment1 = new ObservationFragment();
+                            }
+                            ((FunctionActivity) getActivity()).changFragment(fragment1);
+                            break;
+                        case "审计":
+                        case "TAG":
+                            if (fragment == null) {
+                                fragment = new ManagerclassifyFragment();
+                            }
+                            ((FunctionActivity) getActivity()).changFragment(fragment);
+                            break;
                     }
                 } else {
                     Toast.makeText(context, "表单填写不完整,请重新填写", Toast.LENGTH_LONG).show();

@@ -22,7 +22,6 @@ import java.util.Random;
 
 import static android.app.Activity.RESULT_OK;
 
-
 public class CameraAlbumUtil {
     private static final int TAKE_PHOTO = 1;//拍照
     private static final int OPEN_ALBUM_ON_NOUGAT = 2;//7.0及以上打开相册
